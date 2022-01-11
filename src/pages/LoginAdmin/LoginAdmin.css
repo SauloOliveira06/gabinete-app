@@ -1,0 +1,19 @@
+#brasao_assembleia {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.img-fluid {
+    height: 100% !important;
+}
+
+.card-body {
+    height: 80vh;
+}
+
+.copyright-login {
+    margin-top: 3rem;
+    display: block;
+    text-align: center;
+}
