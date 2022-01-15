@@ -1,47 +1,85 @@
-.card-counter {
-    box-shadow: 2px 2px 10px #DADADA;
-    margin: 5px;
-    padding: 20px 10px;
-    background-color: rgb(200, 15, 15);
-    height: 130px;
-    border-radius: 5px;
-    transition: .3s linear all;
+.icon-circle {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.card-counter:hover {
-    box-shadow: 4px 4px 20px #DADADA;
-    transition: .3s linear all;
+.text-primary {
+    font-weight: 400;
+}
+.text-success {
+    font-weight: 400;
+}
+.text-info {
+    font-weight: 400;
+}
+.text-warning {
+    font-weight: 400;
 }
 
-.card-counter.primary {
-    background-color: #007bff;
-    color: #FFF;
+.border-left-primary {
+    border-left: 0.25rem solid #4e73df !important;
 }
 
-.card-counter.danger {
-    background-color: #ef5350;
-    color: #FFF;
+.border-bottom-primary {
+    border-bottom: 0.25rem solid #4e73df !important;
 }
 
-.card-counter.success {
-    background-color: #66bb6a;
-    color: #FFF;
+.border-left-secondary {
+    border-left: 0.25rem solid #858796 !important;
 }
 
-.card-counter.info {
-    background-color: #26c6da;
-    color: #FFF;
+.border-bottom-secondary {
+    border-bottom: 0.25rem solid #858796 !important;
 }
 
-.card-counter .count-numbers {
-    font-size: 2rem;
-    display: block;
+.border-left-success {
+    border-left: 0.25rem solid #1cc88a !important;
 }
 
-.card-counter .count-name {
-    font-style: italic;
-    font-weight: 500;
-    opacity: 0.5;
-    display: block;
-    font-size: 1.2rem;
+.border-bottom-success {
+    border-bottom: 0.25rem solid #1cc88a !important;
+}
+
+.border-left-info {
+    border-left: 0.25rem solid #36b9cc !important;
+}
+
+.border-bottom-info {
+    border-bottom: 0.25rem solid #36b9cc !important;
+}
+
+.border-left-warning {
+    border-left: 0.25rem solid #f6c23e !important;
+}
+
+.border-bottom-warning {
+    border-bottom: 0.25rem solid #f6c23e !important;
+}
+
+.border-left-danger {
+    border-left: 0.25rem solid #e74a3b !important;
+}
+
+.border-bottom-danger {
+    border-bottom: 0.25rem solid #e74a3b !important;
+}
+
+.border-left-light {
+    border-left: 0.25rem solid #f8f9fc !important;
+}
+
+.border-bottom-light {
+    border-bottom: 0.25rem solid #f8f9fc !important;
+}
+
+.border-left-dark {
+    border-left: 0.25rem solid #5a5c69 !important;
+}
+
+.border-bottom-dark {
+    border-bottom: 0.25rem solid #5a5c69 !important;
 }

@@ -24,11 +24,7 @@ const Dashboard = () => {
                 </Container>
             </section>
             <section>
-                <Container fluid>
-                    <Row>
-                        <CardsInfo />
-                    </Row>
-                </Container>
+                <CardsInfo />
             </section>
         </main>
     )
