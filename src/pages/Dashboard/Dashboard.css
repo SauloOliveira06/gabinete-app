@@ -1,0 +1,4 @@
+.componente-breadcrumb {
+    display: grid;
+    justify-content: flex-end;
+}
