@@ -10,12 +10,15 @@
 .text-primary {
     font-weight: 400;
 }
+
 .text-success {
     font-weight: 400;
 }
+
 .text-info {
     font-weight: 400;
 }
+
 .text-warning {
     font-weight: 400;
 }
@@ -82,4 +85,8 @@
 
 .border-bottom-dark {
     border-bottom: 0.25rem solid #5a5c69 !important;
+}
+
+.card {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }

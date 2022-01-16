@@ -5,13 +5,14 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Navigate
 } from "react-router-dom";
 import './App.css';
 import Pautas from './pages/Pautas/Pautas';
-import Funcionarios from './pages/Funcionarios/Funcionarios';
 import Suporte from './pages/Suporte/Suporte';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
+import FormFuncionario from './pages/Funcionarios/FormFuncionario/FormFuncionario';
+import Funcionarios from './pages/Funcionarios/Funcionarios';
+import EditarFuncionarios from './pages/Funcionarios/EditarFuncionario/EditarFuncionario'
 
 const App = () => {
   return (
@@ -21,7 +22,9 @@ const App = () => {
           <Route path='/' element={<LoginAdmin />} />
           <Route path='/dashboard-administrativo' index element={<Dashboard />} />
           <Route path='/pautas' index element={<Pautas />} />
-          <Route path='/funcionario' index element={<Funcionarios />} />
+          <Route path='/funcionario' index element={<FormFuncionario />} />
+          <Route path='/cadastrar-funcionario' index element={<Funcionarios />} />
+          <Route path='/editar-funcionario' index element={<EditarFuncionarios />} />
           <Route path='/suporte' index element={<Suporte />} />
           <Route path='/404' index element={<PageNotFound />} />
         </Routes>

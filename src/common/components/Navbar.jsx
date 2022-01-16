@@ -5,6 +5,7 @@ import * as Bs from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import { IconContext } from 'react-icons';
+import { Dropdown } from 'react-bootstrap';
 import '../index.css';
 
 function Navbar() {
@@ -26,9 +27,24 @@ function Navbar() {
                         <Link to='#' >
                             <Bs.BsBell style={{ fontSize: '22px', color: 'rgb(136,136,136)' }} />
                         </Link>
-                        <Link to='#' >
+                        
+                        {/* <Link to='#' >
                             <FaIcons.FaUserCircle style={{ fontSize: '22px', color: 'rgb(136,136,136)' }} />
-                        </Link>
+                        </Link> */}
+                        
+                        <Dropdown>
+                            <Dropdown.Toggle variant="none" id="dropdown-basic">
+                                <FaIcons.FaUserCircle style={{ fontSize: '22px', color: 'rgb(136,136,136)' }} />
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu id='block-dropdown'>
+                                <Dropdown.Item href="#/action-1">Perfil</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Ajuda</Dropdown.Item>
+                                <Dropdown.Divider />
+                                <Dropdown.Item href="/">Sair</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+
                     </div>
                 </div>
                 <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>

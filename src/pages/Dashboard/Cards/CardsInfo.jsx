@@ -30,7 +30,7 @@ const CardsInfo = () => {
             <Container fluid className='mt-4'>
                 <Row>
                     <Col xl={3} md={6} style={{ marginBottom: '1.5rem' }}>
-                        <div className="card border-left-primary shadow h-100 py-2">
+                        <div className="card border-left-primary h-100 py-2">
                             <div className="card-body">
                                 <div className="row no-gutters align-items-center">
                                     <Col>
@@ -49,7 +49,7 @@ const CardsInfo = () => {
 
 
                     <Col xl={3} md={6} style={{ marginBottom: '1.5rem' }}>
-                        <div className="card border-left-success shadow h-100 py-2">
+                        <div className="card border-left-success h-100 py-2">
                             <div className="card-body">
                                 <div className="row no-gutters align-items-center">
                                     <Col>
@@ -66,9 +66,8 @@ const CardsInfo = () => {
                         </div>
                     </Col>
 
-
                     <Col xl={3} md={6} style={{ marginBottom: '1.5rem' }}>
-                        <div className="card border-left-info shadow h-100 py-2">
+                        <div className="card border-left-info h-100 py-2">
                             <div className="card-body">
                                 <div className="row no-gutters align-items-center">
                                     <Col className="col mr-2">
@@ -91,7 +90,7 @@ const CardsInfo = () => {
 
 
                     <Col xl={3} md={6} style={{ marginBottom: '1.5rem' }}>
-                        <div className="card border-left-warning shadow h-100 py-2">
+                        <div className="card border-left-warning h-100 py-2">
                             <div className="card-body">
                                 <div className="row no-gutters align-items-center">
                                     <Col>

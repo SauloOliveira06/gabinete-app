@@ -15,7 +15,27 @@
 }
 
 .icon-bars {
-    margin: 10px 10px;
+    margin: 10px 10px 0px;
+}
+
+#block-dropdown {
+    margin: 1rem;
+    transition: .4s;
+}
+
+#block-dropdown a {
+    font-weight: 400;
+}
+
+#block-dropdown a:hover {
+    background-color: #d8d6d6;
+    width: auto;
+    transition: .4s;
+    border-radius: 3px;
+}
+
+#dropdown-basic {
+    margin-top: .2rem;
 }
 
 .title-dashboard {
@@ -28,9 +48,9 @@
 }
 
 .icons-user::after {
-    content:'';
-    width:100%;
-    background-color: red;
+    content: '';
+    width: 100%;
+    /* background-color: red; */
 }
 
 .menu-bars {
@@ -39,6 +59,10 @@
     background: none;
     display: inline-flex;
     align-items: center;
+}
+
+.dropdown-toggle::after {
+    content: none !important;
 }
 
 .nav-menu {
