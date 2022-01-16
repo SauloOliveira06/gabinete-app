@@ -9,7 +9,7 @@ const InfoTable = () => {
                 <Row>
                     <Col sm={12} md={12} xl={12}>
                         <div className='mt-5'>
-                            <table id="datatable" className="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <table id="datatable" className="table table-striped table-bordered" cellSpacing="0" width="100%">
                                 <thead>
                                     <tr>
                                         <th>Gestores</th>
