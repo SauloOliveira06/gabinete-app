@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import Navbar from '../../../common/components/Navbar'
 import './FuncionariosForm.css'
 import ApiCep from '../../../services/api_cep'
+import InputMask from 'react-input-mask'
 
 const CadastrarFuncionario = () => {
 
@@ -65,16 +66,28 @@ const CadastrarFuncionario = () => {
                                     className="form-control"
                                     id="sobrenome"
                                     placeholder="Digite o sobrenome"
-
+                                />
+                            </div>
+                        </Col>
+                        <Col md={6}>
+                            <div className="form-group">
+                                <label htmlFor="email">Email</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    className="form-control"
+                                    id="email"
+                                    placeholder="Digite o email"
                                 />
                             </div>
                         </Col>
                         <Col md={3}>
                             <div className="form-group">
                                 <label htmlFor="cep">CEP</label>
-                                <input
-                                    type="number"
+                                <InputMask
+                                    type="text"
                                     name="cep"
+                                    mask="99999-999"
                                     className="form-control" id="cep"
                                     placeholder="Digite o CEP"
                                     onBlur={handleEndereco}
@@ -175,7 +188,7 @@ const CadastrarFuncionario = () => {
                             </div>
                         </Col>
                     </Row>
-                    <button type="submit" className="btn btn-primary mt-2">Cadastrar</button>
+                    <button className="btn btn-primary mt-2">Cadastrar</button>
                 </form>
             </Container>
 

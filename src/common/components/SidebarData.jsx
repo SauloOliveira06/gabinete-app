@@ -11,7 +11,7 @@ export const SidebarData = [
     },
     {
         title: 'Funcionários',
-        path: '/cadastrar-funcionario',
+        path: '/funcionario',
         icon: <AiIcons.AiOutlineUser />,
         cName: 'nav-text'
     },

@@ -22,8 +22,8 @@ const App = () => {
           <Route path='/' element={<LoginAdmin />} />
           <Route path='/dashboard-administrativo' index element={<Dashboard />} />
           <Route path='/pautas' index element={<Pautas />} />
-          <Route path='/funcionario' index element={<CadastrarFuncionario />} />
-          <Route path='/cadastrar-funcionario' index element={<Funcionarios />} />
+          <Route path='/cadastrar-funcionario' index element={<CadastrarFuncionario />} />
+          <Route path='/funcionario' index element={<Funcionarios />} />
           <Route path='/editar-funcionario' index element={<EditarFuncionarios />} />
           <Route path='/suporte' index element={<Suporte />} />
           <Route path='/404' index element={<PageNotFound />} />
