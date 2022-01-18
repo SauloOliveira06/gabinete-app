@@ -83,6 +83,23 @@
     transition: 350ms;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 99;
+}
+
+.overlay.visible {
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+
 .nav-text {
     display: flex;
     justify-content: flex-start;

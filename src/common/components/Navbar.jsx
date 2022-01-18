@@ -27,11 +27,11 @@ function Navbar() {
                         <Link to='#' >
                             <Bs.BsBell style={{ fontSize: '22px', color: 'rgb(136,136,136)' }} />
                         </Link>
-                        
+
                         {/* <Link to='#' >
                             <FaIcons.FaUserCircle style={{ fontSize: '22px', color: 'rgb(136,136,136)' }} />
                         </Link> */}
-                        
+
                         <Dropdown>
                             <Dropdown.Toggle variant="none" id="dropdown-basic">
                                 <FaIcons.FaUserCircle style={{ fontSize: '22px', color: 'rgb(136,136,136)' }} />
@@ -75,6 +75,7 @@ function Navbar() {
                         </ul>
                     </ul>
                 </nav>
+                <div className={`overlay ${sidebar ? 'visible' : ''}`} />
             </IconContext.Provider>
         </>
     );

@@ -1,20 +1,45 @@
-import React, { useState } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import React, { useState } from 'react';
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import { Card, Col, Container, Row } from 'react-bootstrap'
 import Navbar from '../../../common/components/Navbar'
-import './FuncionariosForm.css'
 import ApiCep from '../../../services/api_cep'
 import InputMask from 'react-input-mask'
+import * as Yup from 'yup'
+import './FuncionariosForm.css'
 
 const CadastrarFuncionario = () => {
+    const [endereco, setEndereco] = useState({});
 
-    const [endereco, setEndereco] = useState({
-        cep: '',
-        logradouro: '',
-        complemento: '',
-        localidade: '',
-        bairro: '',
-        uf: ''
+    const validationSchema = Yup.object().shape({
+        nome: Yup.string()
+            .required('campo nome é obrigatório!'),
+        sobrenome: Yup.string()
+            .required('campo sobrenome é obrigatório!'),
+        email: Yup.string()
+            .required('o email é obrigatório!'),
+        cep: Yup.string()
+            .required('CEP obrigatório!'),
+        logradouro: Yup.string()
+            .required('o logradouro é obrigatório!'),
+        localidade: Yup.string()
+            .required('campo cidade é obrigatório!'),
+        bairro: Yup.string()
+            .required('campo bairro é obrigatório!'),
+        uf: Yup.string()
+            .required('campo UF é obrigatório!'),
+        password: Yup.string()
+            .required('campo senha é obrigatório!')
     });
+
+    const formOptions = { resolver: yupResolver(validationSchema) };
+
+    const { register, handleSubmit, reset, formState } = useForm(formOptions);
+    const { errors } = formState;
+
+    // useEffect(() => {
+    //     setTimeout(() => setEndereco({nome: '', }))
+    // }, [])
 
     const handleEndereco = (e) => {
         const cep = e.target.value;
@@ -37,11 +62,20 @@ const CadastrarFuncionario = () => {
             .finally(() => console.log('end'))
     }
 
+    const checarEnter = (e) => {
+        if (e.key === 'Enter') e.preventDefault();
+    };
+
+    function onSubmit(data) {
+        alert('Cadastrado (FAKE) \n\n' + JSON.stringify(data, null, 4));
+        return false;
+    }
+
     return (
         <>
             <Navbar />
             <Container fluid>
-                <form className="mt-5">
+                <form className="mt-5" onKeyDown={checarEnter} onSubmit={handleSubmit(onSubmit)} >
                     <h3 className='mb-4'>Cadastrar Funcionário</h3>
                     <Row>
                         <Col md={6}>
@@ -50,11 +84,12 @@ const CadastrarFuncionario = () => {
                                 <input
                                     type="text"
                                     name="nome"
-                                    className="form-control"
+                                    className={`form-control ${errors.nome ? 'is-invalid' : ''}`}
                                     id="nome"
                                     placeholder="Digite o nome"
-
+                                    {...register('nome')}
                                 />
+                                <div className="invalid-feedback">{errors.nome?.message}</div>
                             </div>
                         </Col>
                         <Col md={6}>
@@ -63,10 +98,11 @@ const CadastrarFuncionario = () => {
                                 <input
                                     type="text"
                                     name="sobrenome"
-                                    className="form-control"
-                                    id="sobrenome"
+                                    className={`form-control ${errors.sobrenome ? 'is-invalid' : ''}`}
                                     placeholder="Digite o sobrenome"
+                                    {...register('sobrenome')}
                                 />
+                                <div className="invalid-feedback">{errors.sobrenome?.message}</div>
                             </div>
                         </Col>
                         <Col md={6}>
@@ -75,10 +111,11 @@ const CadastrarFuncionario = () => {
                                 <input
                                     type="email"
                                     name="email"
-                                    className="form-control"
-                                    id="email"
+                                    {...register('email')}
+                                    className={`form-control ${errors.email ? 'is-invalid' : ''}`}
                                     placeholder="Digite o email"
                                 />
+                                <div className="invalid-feedback">{errors.email?.message}</div>
                             </div>
                         </Col>
                         <Col md={3}>
@@ -87,11 +124,14 @@ const CadastrarFuncionario = () => {
                                 <InputMask
                                     type="text"
                                     name="cep"
+                                    {...register('cep')}
+                                    value={endereco.cep}
                                     mask="99999-999"
-                                    className="form-control" id="cep"
+                                    className={`form-control ${errors.cep ? 'is-invalid' : ''}`}
                                     placeholder="Digite o CEP"
                                     onBlur={handleEndereco}
                                 />
+                                <div className="invalid-feedback">{errors.cep?.message}</div>
                             </div>
                         </Col>
                         <Col md={3}>
@@ -101,11 +141,12 @@ const CadastrarFuncionario = () => {
                                     <input
                                         type="text"
                                         name="logradouro"
-                                        className="form-control"
-                                        id="logradouro"
+                                        {...register('logradouro')}
+                                        className={`form-control ${errors.logradouro ? 'is-invalid' : ''}`}
                                         value={endereco.logradouro}
                                         placeholder="Logradouro"
                                     />
+                                    <div className="invalid-feedback">{errors.logradouro?.message}</div>
                                 </div>
                             </div>
                         </Col>
@@ -117,7 +158,6 @@ const CadastrarFuncionario = () => {
                                         type="text"
                                         name="complemento"
                                         className="form-control"
-                                        id="complemento"
                                     />
                                 </div>
                             </div>
@@ -129,11 +169,12 @@ const CadastrarFuncionario = () => {
                                     <input
                                         type="text"
                                         name="bairro"
-                                        className="form-control"
-                                        id="bairro"
+                                        {...register('bairro')}
+                                        className={`form-control ${errors.bairro ? 'is-invalid' : ''}`}
                                         value={endereco.bairro}
                                         placeholder="Bairro"
                                     />
+                                    <div className="invalid-feedback">{errors.bairro?.message}</div>
                                 </div>
                             </div>
                         </Col>
@@ -144,10 +185,12 @@ const CadastrarFuncionario = () => {
                                     <input
                                         type="text"
                                         name="city"
-                                        className="form-control"
+                                        {...register('localidade')}
+                                        className={`form-control ${errors.localidade ? 'is-invalid' : ''}`}
                                         value={endereco.localidade}
-                                        id="cidade"
+                                        placeholder='Cidade'
                                     />
+                                    <div className="invalid-feedback">{errors.localidade?.message}</div>
                                 </div>
                             </div>
                         </Col>
@@ -156,11 +199,13 @@ const CadastrarFuncionario = () => {
                                 <label htmlFor="estado">Estado</label>
                                 <input
                                     type="text"
-                                    name="zip"
-                                    className="form-control"
+                                    name="uf"
+                                    {...register('uf')}
+                                    className={`form-control ${errors.uf ? 'is-invalid' : ''}`}
                                     value={endereco.uf}
-                                    id="estado"
+                                    placeholder='UF'
                                 />
+                                <div className="invalid-feedback">{errors.uf?.message}</div>
                             </div>
                         </Col>
                         <Col md={3}>
@@ -170,8 +215,6 @@ const CadastrarFuncionario = () => {
                                     className="form-control"
                                     name="starting_date"
                                     type="date"
-                                    defaultValue="10-04-1996"
-                                    id="data_nascimento"
                                 />
                             </div>
                         </Col>
@@ -179,12 +222,13 @@ const CadastrarFuncionario = () => {
                             <div className="form-group">
                                 <label htmlFor="password" >Cadastrar Senha</label>
                                 <input
-                                    className="form-control"
+                                    type='password'
                                     name="password"
-                                    type="password"
-                                    id="password"
-                                    placeholder='***'
+                                    {...register('password')}
+                                    className={`form-control ${errors.password ? 'is-invalid' : ''}`}
+                                    placeholder='Digite uma senha'
                                 />
+                                <div className="invalid-feedback">{errors.password?.message}</div>
                             </div>
                         </Col>
                     </Row>
@@ -192,9 +236,7 @@ const CadastrarFuncionario = () => {
                 </form>
             </Container>
 
-
-
-            {/* <Container fluid >
+            <Container fluid >
                 <Row>
                     <Col sm={12} md={12} xl={12}>
                         <div className='mt-5'>
@@ -252,7 +294,7 @@ const CadastrarFuncionario = () => {
                         </div>
                     </Col>
                 </Row>
-            </Container> */}
+            </Container>
         </>
     )
 }
