@@ -13,6 +13,7 @@ import PageNotFound from './pages/PageNotFound/PageNotFound';
 import CadastrarFuncionario from './pages/Funcionarios/CadastrarFuncionario/CadastrarFuncionario';
 import Funcionarios from './pages/Funcionarios/Funcionarios';
 import EditarFuncionarios from './pages/Funcionarios/EditarFuncionario/EditarFuncionario'
+import Clientes from './pages/Clientes/Clientes';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path='/cadastrar-funcionario' index element={<CadastrarFuncionario />} />
           <Route path='/funcionario' index element={<Funcionarios />} />
           <Route path='/editar-funcionario' index element={<EditarFuncionarios />} />
+          <Route path='/clientes' index element={<Clientes />} />
           <Route path='/suporte' index element={<Suporte />} />
           <Route path='/404' index element={<PageNotFound />} />
         </Routes>

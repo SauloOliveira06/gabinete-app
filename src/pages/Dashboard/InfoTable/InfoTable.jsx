@@ -5,7 +5,7 @@ import './InfoTable.css'
 const InfoTable = () => {
     return (
         <>
-            <Container fluid >
+            <Container >
                 <Row>
                     <Col sm={12} md={12} xl={12}>
                         <div className='mt-5'>
@@ -34,37 +34,37 @@ const InfoTable = () => {
 
                                 <tbody>
                                     <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
+                                        <td>Diego Batista</td>
+                                        <td>Ronaldo Fenômeno</td>
+                                        <td>Cristiano</td>
                                         <td>61</td>
-                                        <td>2011/04/25</td>
-                                        <td>$320,800</td>
+                                        <td>Pauta X com problemas</td>
+                                        <td>Outros</td>
                                     </tr>
 
                                     <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011/04/25</td>
-                                        <td>$320,800</td>
+                                        <td>Ellie</td>
+                                        <td>Obiwan</td>
+                                        <td>Maria</td>
+                                        <td>28</td>
+                                        <td>Pauta Y com problemas</td>
+                                        <td>Outros</td>
                                     </tr>
                                     <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011/04/25</td>
-                                        <td>$320,800</td>
+                                        <td>Darth Vader</td>
+                                        <td>Naruto</td>
+                                        <td>Joaquim</td>
+                                        <td>11</td>
+                                        <td>Pauta Z com problemas</td>
+                                        <td>Outros</td>
                                     </tr>
                                     <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011/04/25</td>
-                                        <td>$320,800</td>
+                                        <td>Adamaster</td>
+                                        <td>Buda</td>
+                                        <td>Armando</td>
+                                        <td>18</td>
+                                        <td>Pauta W com problemas</td>
+                                        <td>Outros</td>
                                     </tr>
                                 </tbody>
                             </table>

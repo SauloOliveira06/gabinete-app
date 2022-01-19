@@ -27,7 +27,7 @@ export const options = {
 const Charts = () => {
     return (
         <>
-            <Container fluid className='mt-4'>
+            <Container className='mt-4'>
                 <Row>
                     <Col sm={6}>
                         <Chart

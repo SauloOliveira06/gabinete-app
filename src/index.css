@@ -10,3 +10,8 @@ body {
   font-family: 'Roboto', sans-serif !important;
   background-color: #f4f6f9 !important;
 }
+
+.container {
+  margin-left: 2rem !important;
+  margin-right: 2rem !important;
+}

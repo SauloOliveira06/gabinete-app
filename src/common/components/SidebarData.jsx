@@ -1,6 +1,7 @@
 import React from 'react'
 import * as AiIcons from 'react-icons/ai'
 import * as IoIcons from 'react-icons/io'
+import * as Fi from 'react-icons/fi'
 
 export const SidebarData = [
     {
@@ -22,9 +23,16 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
+        title: 'Clientes',
+        path: '/clientes',
+        icon: <Fi.FiUsers />,
+        cName: 'nav-text'
+    },
+    {
         title: 'Suporte',
         path: '/suporte',
         icon: <IoIcons.IoMdHelpCircle />,
         cName: 'nav-text'
     },
+
 ];

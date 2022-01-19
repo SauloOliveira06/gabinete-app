@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Card, Col, Container, Row, Breadcrumb } from 'react-bootstrap'
-import Navbar from '../../../common/components/Navbar'
-import ApiCep from '../../../services/api_cep'
+import Navbar from '../../common/components/Navbar'
+import ApiCep from '../../services/api_cep'
 import InputMask from 'react-input-mask'
 import * as Yup from 'yup'
 import * as AiIcons from 'react-icons/ai'
-import './FuncionariosForm.css'
+import './Clientes.css'
 
-const CadastrarFuncionario = () => {
+const Clientes = () => {
     const [endereco, setEndereco] = useState({});
 
     const validationSchema = Yup.object().shape({
@@ -78,12 +78,12 @@ const CadastrarFuncionario = () => {
             <Container style={{ marginTop: '1rem' }}>
                 <Row>
                     <Col sm={6}>
-                        <div className='title-dashboard'>Cadastro de Funcionarios</div>
+                        <div className='title-dashboard'>Cadastro de Clientes</div>
                     </Col>
                     <Col sm={6}>
                         <Breadcrumb className='componente-breadcrumb'>
-                            <Breadcrumb.Item href="/funcionario">Funcionarios</Breadcrumb.Item>
-                            <Breadcrumb.Item active>Cadastro de funcionarios</Breadcrumb.Item>
+                            <Breadcrumb.Item href="/dashboard-administrativo">Home</Breadcrumb.Item>
+                            <Breadcrumb.Item active>Cadastro de clientes</Breadcrumb.Item>
                         </Breadcrumb>
                     </Col>
                 </Row>
@@ -232,22 +232,21 @@ const CadastrarFuncionario = () => {
                                 />
                             </div>
                         </Col>
-                        <Col md={4}>
+                        <Col md={3}>
                             <div className="form-group">
-                                <label htmlFor="password" >Cadastrar Senha</label>
+                                <label htmlFor="estado">Profissão</label>
                                 <input
-                                    type='password'
-                                    name="password"
-                                    {...register('password')}
-                                    className={`form-control ${errors.password ? 'is-invalid' : ''}`}
-                                    placeholder='Digite uma senha'
+                                    type="text"
+                                    name="uf"
+                                    className='form-control'
+                                    placeholder='Digite a profissão'
                                 />
-                                <div className="invalid-feedback">{errors.password?.message}</div>
+                                <div className="invalid-feedback">{errors.uf?.message}</div>
                             </div>
                         </Col>
                     </Row>
                     <button className="btn btn-primary mt-2">Cadastrar</button>
-                    <button type="button" className="btn btn-secondary mt-2" style={{marginLeft: '10px'}}>Limpar filtro</button>
+                    <button type="button" className="btn btn-secondary mt-2" style={{ marginLeft: '10px' }}>Limpar filtro</button>
                 </form>
             </Container>
 
@@ -263,7 +262,7 @@ const CadastrarFuncionario = () => {
                                         <th>Endereço</th>
                                         <th>Idade</th>
                                         <th>Data de Nascimento</th>
-                                        <th>Senha</th>
+                                        <th>Profissão</th>
                                         <th>Editar</th>
                                         <th>Deletar</th>
                                     </tr>
@@ -276,7 +275,7 @@ const CadastrarFuncionario = () => {
                                         <th>Endereço</th>
                                         <th>Idade</th>
                                         <th>Data de Nascimento</th>
-                                        <th>Senha</th>
+                                        <th>Profissão</th>
                                         <th>Editar</th>
                                         <th>Deletar</th>
                                     </tr>
@@ -289,7 +288,7 @@ const CadastrarFuncionario = () => {
                                         <td>Ronaldo</td>
                                         <td>38</td>
                                         <td>04/03/1999</td>
-                                        <td>********</td>
+                                        <td>Ajudante</td>
                                         <td>
                                             <p data-placement="top" data-toggle="tooltip" title="Edit">
                                                 <button className="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" >
@@ -312,7 +311,7 @@ const CadastrarFuncionario = () => {
                                         <td>Diego</td>
                                         <td>42</td>
                                         <td>21/04/1999</td>
-                                        <td>********</td>
+                                        <td>Programador</td>
                                         <td>
                                             <p data-placement="top" data-toggle="tooltip" title="Edit">
                                                 <button className="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" >
@@ -338,4 +337,4 @@ const CadastrarFuncionario = () => {
     )
 }
 
-export default CadastrarFuncionario
+export default Clientes

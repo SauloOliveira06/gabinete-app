@@ -27,7 +27,7 @@ const CardsInfo = () => {
             } */}
 
 
-            <Container fluid className='mt-4'>
+            <Container className='mt-4'>
                 <Row>
                     <Col xl={3} md={6} style={{ marginBottom: '1.5rem' }}>
                         <div className="card border-left-primary h-100 py-2">

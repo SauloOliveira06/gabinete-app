@@ -4,7 +4,7 @@ import './BreadCrumb.css'
 
 const BreadCrumb = () => {
     return (
-        <Container fluid style={{ marginTop: '1rem' }}>
+        <Container style={{ marginTop: '1rem' }}>
             <Row>
                 <Col sm={6}>
                     <div className='title-dashboard'>Dashboard</div>

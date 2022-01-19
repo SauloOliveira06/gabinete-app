@@ -38,8 +38,8 @@ function Navbar() {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu id='block-dropdown'>
-                                <Dropdown.Item href="#/action-1">Perfil</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">Ajuda</Dropdown.Item>
+                                <Dropdown.Item href="#">Perfil</Dropdown.Item>
+                                <Dropdown.Item href="#">Ajuda</Dropdown.Item>
                                 <Dropdown.Divider />
                                 <Dropdown.Item href="/">Sair</Dropdown.Item>
                             </Dropdown.Menu>
