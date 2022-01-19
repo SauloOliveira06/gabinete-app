@@ -1,0 +1,39 @@
+span {
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    font-weight: 300;
+    color: #000;
+}
+
+.box {
+    padding: 60px 0px;
+}
+
+.box-part {
+    background: #FFF;
+    border-radius: 0;
+    padding: 60px 10px;
+    margin: 30px 0px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: .2s;
+}
+
+.box-part:hover {
+    transform: scale(.97);
+}
+
+#link-box {
+    text-decoration: none;
+}
+
+.text {
+    margin: 20px 0px;
+    font-weight: 300;
+    color: rgb(42, 42, 42);
+}
