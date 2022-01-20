@@ -115,7 +115,7 @@ const Pautas = () => {
                         </Col>
                     </Row>
                     <button className="btn btn-primary mt-2">Cadastrar</button>
-                    <button type="button" className="btn btn-secondary mt-2" style={{ marginLeft: '10px' }}>Limpar filtro</button>
+                    <button className="btn btn-secondary mt-2" style={{ marginLeft: '10px' }}>Limpar filtro</button>
                 </form>
             </Container>
 
